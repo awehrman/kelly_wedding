@@ -1,0 +1,854 @@
+//$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";//
+
+@import "_normalize.scss";
+@import "_grid.scss";
+
+
+$nav-color: #3B416E;
+
+$darkBlue: #141E30;
+$lighterDarkBlue: #1D325A;
+$lightBlue: #E4E6E9;
+$brightBlue: #4A90E2;
+
+$lightGreen: #D2E2A3;
+$darkGreen: #8FC0B5;
+
+$pink: #F9876B;
+
+.moImg {
+    // height: 100px;
+     width: 90px;
+    // background: yellow;
+    float: left;
+    margin: 10px;
+}
+
+.vaImg {
+    padding-top: 1.5rem;
+    width: 110px;
+    float: left;
+    margin: 10px;
+}
+
+
+/* Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    margin: 0;
+}
+
+h1 {
+ // font-size: 1.563rem;
+ font-weight: normal;
+  line-height: 1.3em; //update
+  margin-bottom: 1.5rem;
+
+}
+
+// @media (min-width: 40rem) {
+// //  h1 { font-size: 1.763rem; } //.2 rem bigger
+// }
+
+h3 {
+  font-family: 'Playfair Display', Georgia, sans-serif;
+  font-style: italic;
+  color: $lighterDarkBlue;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  color: $darkBlue;
+  margin: 0 auto;
+  //max-width: 30rem;
+}
+
+blockquote { margin: 0; }
+
+blockquote p {
+  color: #bbb;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+cite { color: #bbb; }
+
+/* Links
+   ========================================================================== */
+
+a {
+  color: $brightBlue;
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+
+/* Elements
+   ========================================================================== */
+
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+  width: 100%;
+}
+
+.rwd {
+  margin: 0 auto 1.5rem auto;
+  max-width: 440px;
+}
+
+/* Header
+   ========================================================================== */
+
+header {
+  text-align: left;
+  color: $lightBlue;
+
+  background: url(../images/home_large.jpg) no-repeat center center;// fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+}
+
+.moImg.desktop {
+    visibility: hidden;
+    display: none;
+}
+
+.invite-wrapper .ceremony-map {
+  background: url(../images/ceremony_map_large.jpg) no-repeat center center;
+}
+
+.invite-wrapper .reception-map {
+  background: url(../images/reception_map_large.jpg) no-repeat center center;
+}
+
+.invite-wrapper a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* tablets and desktop - PINK */
+@media only screen and (min-width: 891px) {
+    html {
+        width: 100%;
+        font-size: 120%;
+    }
+
+    header {
+        //background: $pink;
+
+        padding-top: 18rem;
+
+        .container {
+            margin: 0 auto;
+            padding: 2em 0;
+            max-width: 44.5rem;
+            width: 97.66%;
+        }
+
+        hgroup {
+            max-width: 32rem;
+            float: left;
+            //margin: 0 auto;
+        }
+
+
+        .date {
+          margin-top: 2rem;
+        }
+
+        .moImg.desktop {
+            visibility: visible;
+            display: block;
+        }
+    }
+
+    section.our_story {
+
+        div.container {
+            max-width: 44rem;
+        }
+    }
+
+    section.stlouis {
+
+        div.container {
+            max-width: 44rem;
+        }
+    }
+
+    section.directions {
+       .container {
+        max-width: 44rem;
+
+          .directionsList {
+            margin-left: 4rem;
+
+
+          }
+        }
+    }
+
+    // section.directions .directionsList h3 {
+    //   float: left;
+    // }
+
+    // section.directions .directionsList h4 {
+    //   float: right;
+    // }
+
+    .mobile {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+
+// /* phones - BLUE */
+@media only screen and (max-width: 890px) {
+    html {
+        font-size: 112%;
+    }
+
+    header {
+        background: #333;
+        padding: 1em 0;
+    }
+
+    header .column.sixth {
+        visibility: hidden;
+        display: none;
+    }
+
+    hgroup {
+        padding-top: 2.5rem;
+        padding-left: 2.3rem;
+        max-width: 39rem;
+        margin: 0 auto;
+
+       .vaImg {
+            float: left;
+       }
+    }
+
+    .stateWrapper {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .invite-wrapper {
+        .ceremony {
+            clear: both;
+            width: 100%;
+
+            .container {
+                padding: 2rem 4rem;
+            }
+        }
+
+        .ceremony-map {
+            height: 15rem;
+            width: 100%;
+            position: static;
+        }
+
+        .reception {
+            width: 100%;
+            clear: right;
+
+            .container {
+                padding: 2rem 4rem;
+            }
+        }
+
+        .reception-map {
+            position: static;
+            height: 15rem;
+            float: right;
+            width: 100%;
+        }
+    }
+
+    section.our_story {
+        .ourStoryImg {
+            //background: blue;
+            background: url(../images/our_story_med.jpg) no-repeat center center;// fixed;
+            height: 375px;
+        }
+
+        div.container {
+            margin:0;
+            padding: 2rem;
+
+            blockquote {
+                margin-left: 0;
+            }
+        }
+    }
+
+    section.accomodations {
+      .accomodationsImg {
+          background: url(../images/accomodations_med.jpg) no-repeat center center;// fixed;
+            // -webkit-background-size: cover;
+            // -moz-background-size: cover;
+            // -o-background-size: cover;
+            // background-size: cover;
+          height: 350px;
+        }
+
+      .container {
+        width: 100%;
+        padding: 0 !important;
+
+        .column{
+          padding: 2rem;
+
+          .half {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    section.directions {
+       .container {
+          margin:0;
+          padding: 2rem;
+
+          .directionsList {
+            margin-left: 0rem;
+          }
+        }
+    }
+
+    section.stlouis {
+      .container {
+         margin:0;
+         padding: 2rem;
+      }
+
+      .stlImg {
+          height: 350px;
+      }
+  }
+
+    footer {
+        .footerImg {
+            background: url(../images/footer_med.jpg) no-repeat center center;// fixed;
+              // -webkit-background-size: cover;
+              // -moz-background-size: cover;
+              // -o-background-size: cover;
+              // background-size: cover;
+            height: 350px;
+        }
+    }
+}
+
+// portrait phones - ORANGE
+@media only screen and (max-width: 890px) and (orientation: portrait) {
+    html {
+        font-size: 100%;
+      }
+
+    header {
+        background: #333;
+    }
+
+    .invite-wrapper {
+        .ceremony, .reception {
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    }
+
+    section.accomodations {
+      .container {
+        .column {
+          padding: 1rem;
+        }
+      }
+    }
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.441rem !important;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+span.intro {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem  !important;
+}
+
+
+.date {
+  text-align: center;
+  //margin-top: 2rem;
+}
+
+header h2 {
+  color: $lightGreen;
+  font-family: 'Playfair Display SC', Georgia, sans-serif;
+  font-size: 1.563rem !important;
+}
+
+header h3 {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+header h3 {
+    color: $lightBlue;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+section {
+    width: 100%;
+}
+
+/* Invite
+   ========================================================================== */
+
+.invite-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+.ceremony {
+    background: $darkBlue;
+    float: left;
+    width: 50%;
+}
+
+.ceremony-map {
+    background: green;
+    float: left;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.reception-map {
+    background: green;
+    float: left;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.reception {
+    background: $darkBlue;
+    float: right;
+    width: 50%;
+}
+
+section.invite h1 {
+    color: $lightBlue;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 1.953em;
+    margin-top: 0;
+    margin-bottom: .3em;
+}
+
+section.invite h2 {
+    color: $lightBlue;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.563rem;
+}
+
+section.invite h3 {
+    color: $brightBlue;
+    font-size: 1.563rem;
+    font-style: normal;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+section.invite p {
+    color: $brightBlue;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+section.invite .container {
+    margin: 0 auto;
+    padding: 3rem 4rem;
+}
+
+.respondBy {
+    padding: 1em;
+}
+
+/* Our Story
+   ========================================================================== */
+
+.ourStoryImg {
+    //background: yellow;
+    background: url(../images/our_story_large.jpg) no-repeat center center;// fixed;
+    width: 100%;
+    height: 550px;
+}
+
+section.our_story {
+    background: #fff;
+    color: $darkBlue;
+}
+
+section.our_story .container {
+    margin-left: 20rem;
+    padding: 2rem;
+}
+
+section.our_story h1 {
+    font-size: 1.563em;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: $darkBlue;
+
+}
+
+section.our_story p {
+    padding-bottom: 1.3rem;
+    font-size: 1rem;
+}
+
+section.our_story blockquote {
+    margin-left: -11rem;
+    color: $brightBlue;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+
+/* St. Louis
+   ========================================================================== */
+
+   section.stlouis {
+    margin: 0 auto;
+
+    .stlImg {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.563em;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      display: block;
+    }
+
+   }
+
+   section.stlouis>a:first-of-type {
+     display: block;
+     height: 3.5rem;
+   }
+
+   section.stlouis .container {
+       //width: 66.7%;
+       padding: 0 3rem 3rem;
+       margin: 0 auto;
+
+       h2 {
+         color: $brightBlue;
+         font-family: 'Lato', Helvetica, Arial, sans-serif;
+         margin-bottom: 1.1rem;
+         font-size: 1.25rem;
+         font-weight: 300;
+       }
+
+       p {
+         margin-bottom: 1.3rem;
+       }
+   }
+
+
+/* Accomodations
+   ========================================================================== */
+
+.accomodationsImg {
+    //background: yellow;
+    background: url(../images/accomodations_large.jpg) no-repeat center center;// fixed;
+    width: 100%;
+    height: 550px;
+}
+
+section.accomodations {
+    background: $darkBlue;
+    color: $lightBlue;
+
+    p {
+      color: $lightBlue;
+      margin-bottom: 1em;
+    }
+
+    blockquote p{
+      color: $lightGreen;
+      font-style: normal;
+      padding-left: 2rem;
+
+      a {
+        color: $lightGreen;
+      }
+    }
+
+}
+
+section.accomodations .container {
+  margin: 0 auto;
+  padding: 3rem 10rem;
+}
+
+section.accomodations h1 {
+    font-size: 1.563em;
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+
+}
+
+/* Directions
+   ========================================================================== */
+
+section.directions {
+    color: $darkBlue;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 1.563em;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+
+    }
+}
+
+section.directions>a:first-of-type {
+  display: block;
+  height: 3.5rem;
+}
+
+section.directions .container {
+    //width: 66.7%;
+    //padding: 3rem;
+    padding: 2rem;
+    margin: 0 auto;
+
+
+    h2 {
+      color: $brightBlue;
+      font-family: 'Lato', Helvetica, Arial, sans-serif;
+      margin-bottom: 1.1rem;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .directionsList {
+      //margin-left:1rem;
+
+      h3 {
+        color: $lighterDarkBlue;
+        //font-family: 'Lato', Helvetica, Arial, sans-serif;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        border-bottom: 1px dashed $brightBlue;
+        width: 100%;
+        font-size: 1.25rem;
+      }
+
+      h4 {
+        color: $brightBlue;
+        font-size: 1rem;
+        font-weight: 600;
+        font-style: italic;
+        border-top: 1px dashed $brightBlue;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 4rem;
+      }
+
+      ol {
+        //border-left: 6px solid $lightGreen;
+        color: $darkBlue;
+
+        //line-height: 2.3rem;
+
+      }
+
+      ol.steps {
+          list-style-type: none;
+          //list-style-type: decimal !ie; /*IE 7- hack*/
+          //background: pink;
+          margin: 0;
+          margin-left: 3em;
+          padding: 0;
+
+          counter-reset: li-counter;
+
+          li {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 0.5em;
+            min-height: 1.25em;
+            //border-left: 2px solid $lightGreen;
+
+            span {
+              color: $brightBlue;
+              font-style: italic;
+              font-size: .8em;
+              float: right;
+            }
+          }
+
+          li:before {
+            position: absolute;
+            top: 0;
+            left: -1em;
+            width: 0.8em;
+
+            font-size: 1.25em;
+            line-height: 1;
+            font-weight: bold;
+            text-align: right;
+            color: $brightBlue;
+
+            content: counter(li-counter);
+            counter-increment: li-counter;
+          }
+        }
+    }
+
+    img {
+      max-width: 30rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
+}
+
+
+/* Registry
+   ========================================================================== */
+
+section.registry {
+    background: $darkBlue;
+    color: $lightBlue;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 1.563em;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+}
+
+section.registry>a:first-of-type {
+  display: block;
+  height: 3.5rem;
+}
+
+section.registry .container {
+    width: 66.7%;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+section.registry p {
+    padding-bottom: 1.3rem;
+    font-size: 1rem;
+    color: $lightBlue;
+    text-align: center;
+}
+
+.regWrapper {
+    margin: 0 auto;
+    width: 50rem;
+}
+
+.regImg {
+    height: 20rem;
+    width: 15rem;
+    text-align: center;
+    float: left;
+    margin: .8rem;
+    background: $lightBlue;
+}
+
+
+
+/* Footer
+   ========================================================================== */
+
+.footerImg {
+    //background: yellow;
+    background: url(../images/footer_large.jpg) no-repeat center center;// fixed;
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      // background-size: cover;
+    width: 100%;
+    height: 550px;
+}
+
+footer span {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+
+footer {
+    background: $darkBlue;
+    color: $lightBlue;
+    margin: 0 auto;
+}
+
+footer .container {
+    width: 66.7%;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+footer h1 {
+    font-size: 1.563em;
+    font-family: 'Lato', Helvetica, Arial, san-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 1.3rem;
+    font-size: 1rem;
+    color: $lightBlue;
+    text-align: center;
+}
